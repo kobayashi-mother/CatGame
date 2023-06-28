@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>大隻壁虎游来游去</title>
+    <title>壁虎遊戲</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+        }
+
         /* 设置壁虎的样式 */
         .gecko {
             position: absolute;
@@ -19,21 +39,25 @@
                 top: 50%;
                 transform: scale(1);
             }
+
             25% {
                 left: 50%;
                 top: 0;
                 transform: scale(1.2);
             }
+
             50% {
                 left: 100%;
-                top: 50%;
-                transform: scale(1);
+                top: 40%;
+                transform: scale(1.6);
             }
+
             75% {
                 left: 50%;
                 top: 100%;
                 transform: scale(1.2);
             }
+
             100% {
                 left: 0;
                 top: 50%;
@@ -42,6 +66,7 @@
         }
     </style>
 </head>
+
 <body>
     <script>
         // 添加壁虎元素到页面中
@@ -56,11 +81,12 @@
         }
 
         // 在页面加载完成后添加壁虎
-        window.onload = function() {
+        window.onload = function () {
             addGecko("green", 120, 6);
             addGecko("blue", 150, 4);
             addGecko("red", 100, 8);
         };
     </script>
 </body>
+
 </html>
