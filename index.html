@@ -1,66 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>大隻壁虎游来游去</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatGame</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+
     <style>
-        /* 设置壁虎的样式 */
-        .gecko {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            animation-fill-mode: forwards;
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
         }
 
-        /* 定义壁虎移动的动画 */
-        @keyframes geckoMove {
-            0% {
-                left: 0;
-                top: 50%;
-                transform: scale(1);
-            }
-            25% {
-                left: 50%;
-                top: 0;
-                transform: scale(1.2);
-            }
-            50% {
-                left: 100%;
-                top: 50%;
-                transform: scale(1);
-            }
-            75% {
-                left: 50%;
-                top: 100%;
-                transform: scale(1.2);
-            }
-            100% {
-                left: 0;
-                top: 50%;
-                transform: scale(1);
-            }
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        #cat-image {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #cat-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
-<body>
-    <script>
-        // 添加壁虎元素到页面中
-        function addGecko(color, size, duration) {
-            var gecko = document.createElement("div");
-            gecko.style.backgroundColor = color;
-            gecko.style.width = size + "px";
-            gecko.style.height = size + "px";
-            gecko.style.animation = "geckoMove " + duration + "s infinite linear";
-            gecko.className = "gecko";
-            document.body.appendChild(gecko);
-        }
 
-        // 在页面加载完成后添加壁虎
-        window.onload = function() {
-            addGecko("green", 120, 6);
-            addGecko("blue", 150, 4);
-            addGecko("red", 100, 8);
-        };
-    </script>
+<body>
+    <h1>Welcome to the Black Cat Home</h1>
+
+    <div id="cat-image">
+        <img src="cat.jpg" alt="Cat">
+    </div>
+    <p>想了解更多，請訪問<a href="game1.html">關於頁面</a>。</p>
 </body>
+
 </html>
